@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>JADE 개인정보 처리방침</title>
+<title>FADED 개인정보 처리방침</title>
 <style>
   :root { color-scheme: light dark; }
   body {
@@ -29,19 +29,19 @@
     th, td { border-color: #333; }
     th { background: #1e1e1e; }
   }
+  code { font: .9em ui-monospace, SFMono-Regular, Menlo, monospace; }
 </style>
 </head>
 <body>
-<h1>JADE 개인정보 처리방침</h1>
-<p>최종 수정일: 2026년 9월 1일</p>
-<p>JADE(이하 &quot;앱&quot;)는 사진 편집 앱입니다. 이 문서는 앱이 어떤 정보를 다루는지</p>
-<p>설명합니다.</p>
+<h1>FADED 개인정보 처리방침</h1>
+<p>최종 수정일: 2026년 11월 2일</p>
+<p>FADED(이하 &quot;앱&quot;)는 사진 편집 앱입니다. 이 문서는 앱이 어떤 정보를 다루는지 설명합니다.</p>
 <h2>요약</h2>
 <ul>
 <li><strong>사진은 기기 밖으로 나가지 않습니다.</strong> 편집은 전부 기기 안에서 처리되며, 앱은 사진을 어디에도 업로드하지 않습니다.</li>
 <li><strong>계정이 없습니다.</strong> 회원가입, 로그인, 이메일 수집을 하지 않습니다.</li>
-<li><strong>광고·추적을 하지 않습니다.</strong> 광고 식별자(IDFA)를 쓰지 않고, 다른 앱이나 웹사이트에서의 활동을 추적하지 않습니다.</li>
-<li>앱이 비정상 종료될 때에 한해 <strong>진단 정보</strong>를 보냅니다. 이건 설정에서 끌 수 있습니다.</li>
+<li><strong>광고·추적을 하지 않습니다.</strong> 광고 식별자(iOS IDFA, Android 광고 ID)를 쓰지 않고, 다른 앱이나 웹사이트에서의 활동을 추적하지 않습니다.</li>
+<li>앱을 고치고 개선하기 위해 <strong>진단 정보</strong>(비정상 종료 시)와 <strong>사용 통계</strong> (어떤 화면을 얼마나 쓰는지)를 보냅니다. 둘 다 신원과 연결되지 않으며, 설정에서 각각 끌 수 있습니다.</li>
 </ul>
 <h2>사진 및 편집 내용</h2>
 <p>앱은 사용자가 선택한 사진을 읽고, 편집 결과를 기기에 저장합니다.</p>
@@ -57,8 +57,7 @@
 <tr><td>사진 추가</td><td>편집한 결과를 저장하기 위해</td></tr>
 </table>
 <h2>진단 정보 (크래시 리포트)</h2>
-<p>앱이 비정상 종료되거나 주요 기능이 실패하면, 원인을 파악하기 위해 진단</p>
-<p>정보를 수집합니다. 처리는 <strong>Google Firebase Crashlytics</strong>가 담당합니다.</p>
+<p>앱이 비정상 종료되거나 주요 기능이 실패하면, 원인을 파악하기 위해 진단 정보를 수집합니다. 처리는 <strong>Google Firebase Crashlytics</strong>가 담당합니다.</p>
 <p><strong>수집하는 것</strong></p>
 <ul>
 <li>충돌 지점의 호출 스택과 오류 내용</li>
@@ -73,27 +72,37 @@
 <li>위치 정보</li>
 <li>연락처, 일정, 기타 다른 앱의 데이터</li>
 </ul>
-<p>수집한 정보는 앱의 오류를 고치는 목적으로만 씁니다. 판매하거나 광고에</p>
-<p>쓰지 않으며, 사용자를 식별하거나 추적하는 데 쓰지 않습니다.</p>
-<p><strong>끄는 방법</strong>: 설정 → Crash Reports 를 끄면 됩니다. 끄는 즉시 전송이</p>
-<p>중단되고, 아직 보내지 않은 기록도 삭제됩니다.</p>
-<p>Google의 데이터 처리 방식은 <a href="https://firebase.google.com/support/privacy">Firebase 개인정보처리방침</a>을</p>
-<p>참고하세요.</p>
+<p>수집한 정보는 앱의 오류를 고치는 목적으로만 씁니다. 판매하거나 광고에 쓰지 않으며, 사용자를 식별하거나 추적하는 데 쓰지 않습니다.</p>
+<p><strong>끄는 방법</strong>: 설정 → Crash Reports 를 끄면 됩니다. 끄는 즉시 전송이 중단되고, 아직 보내지 않은 기록도 삭제됩니다.</p>
+<p>Google의 데이터 처리 방식은 <a href="https://firebase.google.com/support/privacy">Firebase 개인정보처리방침</a>을 참고하세요.</p>
+<h2>사용 통계 (Usage Analytics)</h2>
+<p>앱을 어떻게 쓰는지 대략적으로 파악해 기능을 개선하기 위해 사용 통계를 수집합니다. 처리는 <strong>Google Analytics for Firebase</strong>가 담당합니다.</p>
+<p><strong>수집하는 것</strong></p>
+<ul>
+<li>앱 실행·세션·화면 보기 같은 사용 기록</li>
+<li>기기 모델, OS 버전, 앱 버전, 언어 설정</li>
+<li>앱 설치마다 임의로 만들어지는 식별자 (광고 식별자와 연결되지 않음)</li>
+<li>IP 주소에서 추정한 국가·지역 수준의 대략적 위치 (IP 주소 자체는 마스킹되어 저장되지 않으며, 기기의 위치 서비스는 쓰지 않음)</li>
+</ul>
+<p><strong>수집하지 않는 것</strong></p>
+<ul>
+<li>사진, 사진의 내용, 편집 결과</li>
+<li>이름·이메일·전화번호 등 신원을 알 수 있는 정보</li>
+<li>광고 식별자 (iOS IDFA, Android 광고 ID)</li>
+</ul>
+<p>통계는 여러 사용자의 사용 흐름을 묶어 보는 데만 쓰며, 광고나 맞춤형 광고, 다른 회사와의 추적에 쓰지 않습니다.</p>
+<p><strong>끄는 방법</strong>: 설정 → Usage Analytics 를 끄면 됩니다. 끈 뒤로는 사용 기록을 보내지 않으며, 이 선택은 앱을 다시 실행해도 유지됩니다.</p>
 <h2>보관 기간</h2>
-<p>진단 정보는 Firebase Crashlytics의 정책에 따라 최대 90일간 보관된 뒤</p>
-<p>자동 삭제됩니다. 사진과 편집 내용은 기기에만 있으므로, 사용자가 앱에서</p>
-<p>삭제하거나 앱을 지우면 즉시 사라집니다.</p>
+<p>진단 정보는 Firebase Crashlytics의 정책에 따라 최대 90일간 보관된 뒤 자동 삭제됩니다. 사용 통계는 Google Analytics 설정에 따라 최대 14개월간 보관된 뒤 자동 삭제됩니다. 사진과 편집 내용은 기기에만 있으므로, 사용자가 앱에서 삭제하거나 앱을 지우면 즉시 사라집니다.</p>
 <h2>아동의 개인정보</h2>
-<p>앱은 만 14세 미만 아동을 대상으로 하지 않으며, 아동으로부터 의도적으로</p>
-<p>개인정보를 수집하지 않습니다.</p>
+<p>앱은 만 14세 미만 아동을 대상으로 하지 않으며, 아동으로부터 의도적으로 개인정보를 수집하지 않습니다.</p>
 <h2>사용자의 권리</h2>
 <ul>
-<li><strong>수집 거부</strong>: 설정에서 Crash Reports를 끄면 됩니다.</li>
-<li><strong>삭제 요청</strong>: 진단 정보는 신원과 연결되지 않아 개인을 특정해 찾아낼 수 없습니다. 다만 문의를 주시면 확인 가능한 범위에서 조치하겠습니다.</li>
+<li><strong>수집 거부</strong>: 설정에서 Crash Reports(진단 정보)와 Usage Analytics(사용 통계)를 각각 끌 수 있습니다.</li>
+<li><strong>삭제 요청</strong>: 진단 정보와 사용 통계는 신원과 연결되지 않아 개인을 특정해 찾아낼 수 없습니다. 다만 문의를 주시면 확인 가능한 범위에서 조치하겠습니다.</li>
 <li><strong>문의</strong>: portcompany.dev@gmail.com</li>
 </ul>
 <h2>변경 고지</h2>
-<p>이 방침이 바뀌면 앱 업데이트와 함께 이 문서의 최종 수정일을 갱신합니다.</p>
-<p>수집 항목이 늘어나는 등 중요한 변경이 있을 경우 앱 안에서 별도로 안내합니다.</p>
+<p>이 방침이 바뀌면 앱 업데이트와 함께 이 문서의 최종 수정일을 갱신합니다. 수집 항목이 늘어나는 등 중요한 변경이 있을 경우 앱 안에서 별도로 안내합니다.</p>
 </body>
 </html>
